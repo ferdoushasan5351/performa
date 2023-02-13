@@ -1,0 +1,165 @@
+.hero-wrap{
+    background: $primary-light;
+    .container{
+        max-width: 1480px;
+        .inner{
+            @include flexBox(space-between , normal);
+            flex-flow: row wrap;
+        }
+    }
+}
+.hero-thumb{
+    width: 47.56944444444444%;
+    img{
+        width: 100%;
+    }
+}
+.hero-content{
+    width: 45.48611111111111%;
+    padding-top: 184px;
+    padding-right: 150px;
+    h1{
+        font-family: 'CocoSharpExtrabold';
+        font-size: 99.77px;
+        line-height: 106px;
+        color: $primary;
+    }
+    p{
+        font-size: 20px;
+        line-height: 30px;
+        color: $primary;
+        opacity: 0.6;
+        padding-top: 16.88px; 
+    }
+}
+.starter-kit-wrap{
+    width: 100%;
+    padding: 72px 0;
+    .container{
+        max-width: 1240px;
+        @include flexBox(normal , normal);
+        flex-flow: row wrap;
+        padding: 0;
+    }
+    .starter-kit{
+        width: 20%;
+        position: relative;
+        padding: 0 30px;
+        &::after{
+            position: absolute;
+            content: "";
+            width: 2px;
+            height: 100%;
+            background: $primary;
+            opacity: 0.2;
+            left: 0;
+            top: 0;
+        }
+        &:first-child::after{
+            display: none;
+        }
+        h4{
+            font-family: 'CocoSharpExtrabold';
+            text-align: center;
+            font-size: 16px;
+            color: $secondary;
+            line-height: 24.12px;
+        }
+        p{
+            text-align: center;
+            font-size: 14px;
+            line-height: 21.1px;
+            color: $primary;
+            opacity: 0.6;
+            padding-top: 7px;
+        }
+        .read-more-btn{
+            width: 95px;
+            margin: 0 auto;
+            margin-top: 24px;
+            a{
+                display: block;
+                width: 100%;
+                height: 17px;
+                font-size: 14px;
+                color: $primary;
+                @include flexBox(space-between , center)
+            }
+        }
+    }
+}
+
+
+// responsive
+
+@media only screen and (max-width: 1223px){
+
+    .hero-content{
+        padding-right: 0;
+    }
+
+
+
+}
+@media only screen and (max-width: 1158px){
+    .hero-thumb{
+        width: 50%;
+    }
+    .hero-content{
+        padding-top: 100px;
+        h1{
+            font-size: 70px;
+            line-height: 70px;
+        }
+        p{
+            font-size: 15px;
+        }
+    }
+}
+@media only screen and (max-width: 750px){
+    .hero-wrap{
+        .inner{
+            display: inherit !important;
+        }
+    }
+    .hero-thumb{
+        width: 100%;
+    }
+    .hero-content{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 916px){
+    .starter-kit{
+        width: 50% !important;
+        margin-top: 50px !important;
+        padding: 0;
+        &:nth-child(3)::after{
+            display: none;
+        }
+        &:nth-child(5)::after{
+            display: none;
+        }
+        &:nth-child(5)::before{
+            position: absolute;
+            content: "";
+            width: 2px;
+            height: 100%;
+            background: $primary;
+            opacity: 0.2;
+            right: -2px;
+            top: 0;
+        }
+    }
+}
+@media only screen and (max-width: 400px){
+    .starter-kit{
+        width: 100% !important;
+        &::after{
+            display: none;
+        }
+        &::before{
+            display: none;
+        }
+    }
+}

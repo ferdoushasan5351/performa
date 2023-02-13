@@ -1,0 +1,83 @@
+.quality-assure-wrap{
+    padding: 120px 0;
+    .container{
+        @include flexBox(space-between , normal);
+        .content{
+            width: 42%;
+            h2{
+                font-family: 'CocoSharpExtrabold';
+                font-size: 44px;
+                line-height: 52.8px;
+                color: $primary;
+            }
+            p{
+                font-size: 16px;
+                line-height: 26px;
+                color: $primary;
+                opacity: 0.6;
+                padding-top: 26px;
+            }
+            button{
+                width: 133px;
+                height: 54px;
+                margin: auto;
+                margin-top: 34px;
+                background: $primary;
+                border: none;
+                border-radius: 10px;
+                font-family: 'CocoSharpBold';
+                font-size: 13px;
+                color: $white;
+                cursor: pointer;
+            }
+        }
+        .item-wrap{
+            width: 51.5%;
+            @include flexBox(normal , normal);
+            flex-flow: row wrap;
+            column-gap: 6.5%;
+            row-gap: 20px;
+            .item{
+                width: 124px;
+                cursor: pointer;
+                svg{
+                    transition: 0.4s;
+                }
+                &:hover{
+                    svg{
+                        opacity: 1;
+                    }
+                }
+                .thumb{
+                    height: 116px;
+                    background: #f7f7f7;
+                    @include flexBox(center , center);
+                    
+                }
+                span{
+                    font-family: 'CocoSharpbold';
+                    display: block;
+                    text-align: center;
+                    font-size: 18px;
+                    line-height: 21.6px;
+                    padding: 0 8px;
+                    padding-top: 16px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 556px){
+
+    .quality-assure-wrap .container{
+        display: inherit;
+        .content{
+            width: 100%;
+        }
+        .item-wrap{
+            width: 100%;
+            padding-top: 40px;
+        }
+    }
+
+}

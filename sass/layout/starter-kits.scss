@@ -1,0 +1,183 @@
+.starter-kits{
+        // padding-bottom: 120px;
+    .strater-kits-up{
+        .container{
+            @include flexBox(normal , normal);
+            column-gap: 14%;
+        }
+    }
+}
+.starter-kit-slider-wrap{
+    width: 47.91666666666667%;
+    height: 100%;
+    .starter-kit-slider{
+        position: relative;
+        width: 100%;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+.owl-theme .owl-nav [class*=owl-]:hover{
+    background: black;
+    color: $white;
+}
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot {
+    font: caption;
+    font-size: 45px;
+    width: 50px;
+    height: 50px;
+    background: $primary;
+    border-radius: 50%;
+    color: $white;
+}
+.owl-prev{
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.owl-next{
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.starter-kits-content{
+    width: 37.5%;
+    h3{
+        font-family: 'CocoSharpExtrabold';
+        font-size: 44px;
+        line-height: 52.8px;
+        color: $primary;
+    }
+    h4{
+        font-family: sans-serif;
+        font-size: 36px;
+        line-height: 43.2px;
+        color: $primary;
+        font-weight: 800;
+    }
+    h5{
+        font-family: 'CocoSharpbold';
+        font-size: 20px;
+        line-height: 24px;
+        color: $primary;
+        opacity: 0.6;
+        padding-top: 30px;
+    }
+    p{
+        font-size: 16px;
+        line-height: 28px;
+        color: $primary;
+        opacity: 0.6;
+        padding-top: 12px;
+    }
+    .bottom-txt{
+        @include flexBox(space-between , normal);
+        padding-top: 30px;
+        a{
+            font-size: 20px;
+            line-height: 24px;
+            opacity: 0.8;
+            padding-top: 15px;
+        }
+        .learn-more-btn{
+            width: 119px;
+            a{
+                font-family: 'CocoSharpBold';
+                display: block;
+                width: 100%;
+                height: 54px;
+                background: rgba(49, 49, 49, 0.07);
+                text-align: center;
+                color: $primary;
+                font-size: 13px;
+                line-height: 54px;
+                border-radius: 10px;
+                padding-top: 0;
+            }
+        }
+    }
+    .starter-kits-pricing{
+        font-family: sans-serif;
+        @include flexBox(normal , normal);
+        column-gap: 24px;
+        padding-top: 24px;
+        padding-bottom: 22px;
+        .pricing-item{
+            width: 99px;
+            height: 71px;
+            border-radius: 10px;
+            border: 1px solid rgba(49, 49, 49, 0.1);
+            padding: 12px 18px;
+            transition: 0.4s;
+            &:hover{
+                background: #f4f4f4;
+            }
+            span{
+                font-size: 14px;
+                line-height: 16.8px;
+                color: $primary;
+            }
+            h6{
+                font-size: 20px;
+                line-height: 24px;
+                color: $primary;
+                font-weight: 700;
+                padding-top: 4px;
+            }
+        }
+    }
+}
+.strater-kits-down{
+    padding: 136px 0;
+    .container{
+        max-width: 1480px;
+        @include flexBox(normal , normal);
+        column-gap: 14%;
+        .thumb{
+            width: 56.18055555555556%;
+            @include flexBox(space-between , normal);
+            figure{
+                width: 48.3271375464684%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        .starter-kits-content{
+            padding-top: 30px;
+            .learn-more-btn{
+                a{
+                    background: $primary;
+                    color: $white;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px){
+
+    .starter-kits .strater-kits-up .container{
+        display: inherit;
+    }
+    .starter-kit-slider-wrap{
+        width: 100%;
+    }
+    .starter-kits-content {
+        width: 100%;
+    }
+    .strater-kits-down .container{
+        display: inherit;
+    }
+    .strater-kits-down .container .thumb{
+        width: 100%;
+    }
+    
+}

@@ -1,0 +1,18 @@
+.insta-feed-wrap{
+    padding-top: 120px;
+    .container{
+        max-width: 1360px;
+        h3{
+            font-family: 'CocoSharpExtrabold';
+                text-align: center;
+                font-size: 44px;
+                line-height: 52.8px;
+                color: $primary;
+        }
+    }
+    .insta-feed-slider{
+        width: 100%;
+        padding-top: 40px;
+        padding-bottom: 120px;
+    }
+}

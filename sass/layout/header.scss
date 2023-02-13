@@ -1,0 +1,184 @@
+.header-wrap{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 34px 0;
+    .inner{
+        @include flexBox(normal , normal)
+    }
+}
+.logo-wrap{
+    width: 228px;
+    @include flexBox(space-between , normal);
+    position: relative;
+    z-index: 999;
+}
+.main-logo{
+    width: 228px;
+    img{
+        width: 100%;
+    }
+    padding-top: 8px;
+}
+.nav-wrap{
+    width: calc(100% - 228px);
+    @include flexBox(flex-end , normal);
+    z-index: 20;
+}
+.main-nav{
+    width: calc(100% - 184px);
+    padding-top: 14px;
+    padding-left: 32px;
+    ul{
+        position: relative;
+        &::after{
+            position: absolute;
+            content: "";
+            width: 2px;
+            height: 20px;
+            background: rgba(49, 49, 49, 0.2);
+            left: 0;
+            top: 3px;
+        }
+        li{
+            display: inline-block;
+            padding-left: 36px;
+            a{
+                font-size: 13px;
+                line-height: 15.6px;
+                color: $primary;
+                transition: 0.4s;
+                &:hover{
+                    color: $green;
+                }
+            }
+        }
+    }
+}
+.btn-wrap{
+    width: 184px;
+    @include flexBox(space-between , normal);
+    button{
+        width: 112px;
+        height: 54px;
+        border: none;
+        background: $secondary;
+        color: $white;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .cart-btn{
+        width: 54px;
+        a{
+            display: block;
+            width: 100%;
+            height: 54px;
+            border: 1px solid rgba(49, 49, 49, 0.2);
+            border-radius: 10px;
+            @include flexBox(center , center);
+        }
+    }
+}
+
+
+// responsive
+
+@media only screen and (max-width: 1140px){
+
+.nav-wrap{
+    display: block;
+    width: 100%;
+    height: 0;
+    background: $primary-light;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    transition: 0.4s ease-in-out;
+    .main-nav{
+        width: 100%;
+        padding-left: 0;
+        padding-top: 0;
+        ul{
+            &::after{
+                display: none;
+            }
+            li{
+                padding-left: 0;
+                display: block;
+                text-align: center;
+                padding-top: 20px;
+            }
+        }
+        
+    }
+    .btn-wrap{
+        margin: 20px auto;
+    }
+}
+
+
+.logo-wrap{
+    width: 100%;
+}
+.hamburger{
+    width: 40px;
+    @include flexBox(normal , center);
+    span{
+        width: 100%;
+        height: 2px;
+        background: $primary;
+        position: relative;
+        transition: 0.3s ease-in-out;
+        &::after{
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 2px;
+            background: $primary;
+            top: 10px;
+            left: 0;
+            transition: 0.3s ease-in-out;
+        }
+        &::before{
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 2px;
+            background: $primary;
+            bottom: 10px;
+            left: 0;
+            transition: 0.3s ease-in-out;
+        }
+    }
+}
+.nav-show{
+    overflow: hidden;
+    .hamburger{
+        span{
+            background: transparent;
+            &::after{
+                top: 0;
+                transform: rotate(-45deg);
+            }
+            &::before{
+                bottom:0;
+                transform: rotate(45deg);
+            }
+        }
+    }
+    .nav-wrap{
+        width: 100%;
+        height: 100vh;
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        padding: 170px 20px 50px;
+    }
+    
+    
+}
+
+
+}
